@@ -5,6 +5,10 @@ case node['platform_family']
     package "libssl-dev"
 end
 
+package "rlwrap" do
+  action :install
+end
+
 # Let the user override the source url in the attributes
 nodejs_src_url = "#{node['nodejs']['src_url']}/#{node['nodejs']['version']}"
 
